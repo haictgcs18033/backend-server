@@ -37,4 +37,6 @@ app.use('/cart',cartRoute)
 app.use('/page',pageRoute)
 app.use('/address',addressRoute)
 app.use('/order',orderRoute)
-app.listen(4000)
+app.listen(process.env.PORT,()=>{
+    console.log(`Connected to server ${process.env.PORT}`);
+})
